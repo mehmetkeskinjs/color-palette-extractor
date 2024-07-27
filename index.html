@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Palette extractor</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+            #complementary,
+            #palette {
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+            }
+            #complementary div,
+            #palette div {
+                width: 200px;
+                aspect-ratio: 1;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+        <script src="./index.js"></script>
+    </head>
+    <body>
+        <form action="#">
+            <input
+                type="file"
+                name="image"
+                id="imageFile"
+                accept="image/png, image/jpeg"
+            />
+            <input
+                type="button"
+                id="buttonLoad"
+                value="load"
+                onclick="main()"
+            />
+        </form>
+        <canvas id="canvas"></canvas>
+        <div id="palette"></div>
+        <div id="complementary"></div>
+    </body>
+</html>
