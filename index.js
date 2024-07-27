@@ -205,8 +205,8 @@ const main = () => {
     fileReader.onload = () => {
         image.onload = () => {
             const canvas = document.querySelector('#canvas');
-            canvas.width = 500;
-            canvas.height = 500;
+            canvas.width = image.width;
+            canvas.height = image.height;
             const ctx = canvas.getContext('2d');
 
             ctx.drawImage(image, 0, 0);
